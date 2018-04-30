@@ -1,0 +1,71 @@
+body {
+  background-image: url("../pix/hands.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Universal */
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Specific to the top header/menu */
+header {
+  background-color: brown;
+  padding-top: 30px;
+  min-height: 50px;
+  border-bottom: 2px solid yellow;
+  position: relative;
+  margin: -8px -8px 0px -8px;
+
+}
+/* to remove underlined link & blue color */
+header a {
+  color: black;
+  text-decoration: none;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the menu horizontal */
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px;
+}
+
+header #logo {
+  float: left;
+}
+
+header #logo h1 {
+  margin: 0;
+}
+
+/* move the navigation menu to the right */
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header a:hover {
+  font-weight: bold;
+}
+
+/* Showcase - main body */
+
+#showcase {
+  min-height: 400px;
+  text-align: center;
+}
+
+#showcase h1 {
+  margin-top: 80px;
+
+}
