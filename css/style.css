@@ -1,35 +1,59 @@
+/* CSS Variables */
+:root {
+  /* --background: rgb(255,123,0); */
+  /* --background: #EAC43B; */
+  --background: #662000;
+  /* --background: #FFC54C; */
+}
+
+html {
+  box-sizing: border-box;
+  color: #fff;
+  background-image: linear-gradient(to top right, gray, white);
+  /* background-color: white; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Kavivanar', cursive;
+  /* font-family: 'Great Vibes', cursive; */
+
+}
+
 body {
   width: 85%;
   margin:auto;
-  background-image: linear-gradient(to top right, gray, black);
-  /* background-image: url("../pix/hands.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; */
 }
 
 /* Universal - applies to the whole page*/
 .container {
-  /* width: 85%; */
-  /* margin: auto; */
+  width: 85%;
+  margin: auto;
   overflow: hidden;
+}
+
+#active {
+  font-weight: bold;
+}
+
+header a:hover {
+  font-weight: bold;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
 }
 
 /* Specific to the top header/menu */
 header {
-  background-color: rgb(255,123,0);
-  padding: 30px 0 0 20px;
+  background-color: var(--background);
+  padding: 20px;
   min-height: 50px;
-  /* border-bottom: 2px solid yellow; */
-  position: relative;
-  align-items: center;
   margin-top: 20px;
-  /* margin: -8px -8px 0px -8px; */
-
 }
+
 /* to remove underlined link & blue color */
-nav a {
-  color: black;
+header a {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -42,7 +66,7 @@ header ul {
 header li {
   float: left;
   display: inline;
-  padding: 0 20px;
+  padding: 1.25rem;
 }
 
 header #logo {
@@ -53,90 +77,92 @@ header #logo h1 {
   margin: 0;
 }
 
+header #logo h1 span{
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+}
+
 /* move the navigation menu to the right */
 header nav {
   float: right;
-  margin-top: 10px;
 }
 
-header a:hover {
-  font-weight: bold;
+h3 {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/* h3::after {
+
+} */
+
+img {
+  max-width: 100%;
 }
 
 /* Showcase - main body */
-
 #showcase {
   background-image: url("../pix/hands.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   min-height: 400px;
-  /* text-align: center; */
+  text-align: center;
   align-items: center;
   justify-content: center;
-  display: flex;
-  color: white;
-  font-size: 32px;
-  margin-top: 20px;
+  /* display: flex; */
+  font-size: 2rem;
 }
 
 #showcase h1 {
   margin-top: 80px;
-
 }
 
-#boxes, #gallery, #pricing, #contact {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+/* To target #boxes, #gallery */
+#boxes, #gallery, #pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
-
-#gallery {
-  text-align: center;
-}
-
-.box, .price, .reachout {
-  background-color: rgb(255,123,0);
-  float: left;
-  width: 31.9%;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 10px;
-
+/* To terget what's insid the boxes */
+.box, .price, .contact, .message{
+  background-color: var(--background);
+  padding: 1.25rem;
 }
 
 .box h3 {
   text-align: center;
 }
 
-.picture {
-  background-color: rgb(255,123,0);
-  float: left;
-  margin: 0 10px 10px 10px;
-  width: 31.9%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+#contact-info {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'contact message message';
+}
+
+.contact {
+  grid-area: contact;
+}
+.message {
+  grid-area: message;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.message input[type="text"] {
+  width: 200px;
+  border: none;
+}
+.message textarea {
+  min-width: 365px;
+  min-height: 80px;
+  border: none;
   box-sizing: border-box;
-  padding: 10px;
-}
-
-#about {
-  background-color: rgb(255,123,0);
-  min-height: 400px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  color: white;
-  font-size: 28px;
-  margin-top: 20px;
-}
-
-#about h1 {
-  text-align: center;
+  resize: none;
+  overflow: auto;
 }
 
 footer {
   text-align: center;
+  color: black;
 }

@@ -2,58 +2,96 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <meta name="description" content="Henna designs art">
     <meta name="keyword" content="henna, henna designs, henna tatto">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Kavivanar" rel="stylesheet">
+    <link rel="icon" href="./pix/VH-icon.png">
     <link rel="reset" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Vivacious Designs - Henna Arts | Welcome</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div id="logo">
-          <h1>Vivacious Designs - Henna Arts</h1>
+    <div class="wrapper">
+      <header>
+        <!-- <div class="container"> -->
+          <div id="logo">
+            <a href="index.html"><h1><span>V</span>ivacious <span>H</span>enna</h1></a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="gallery.html">GALLERY</a></li>
+              <li id="active"><a href="pricing.html">CONTACT & PRICING</a></li>
+            </ul>
+          </nav>
+        <!-- </div> -->
+      </header>
+
+      <section id="contact-info">
+        <div class="contact">
+          <h3> CONTACT INFORMATION</h3>
+          <p>E-mail: vivacioushenna@gmail.com</p>
+          <p>Phone: Coming soon</p>
         </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="pricing.html">PRICING</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+        <div class="message">
+          <h3>CONTACT US</h3>
+          <div class="name-email">
+            <form id="name">Name<br>
+              <input type="text" name="name">
+            </form>
+            <form id="email"><br>E-mail<br>
+              <input type="text" name="name">
+            </form>
+          </div>
 
-    <section id="pricing">
-      <div class="price">
-        <h3>Small Designs - $5 per design</h3>
-        <p>
-          Simple design on the back of the hand or palm.
-        </p>
-      </div>
-      <div class="price">
-        <h3>Complex Designs - $10 per design</h3>
-        <p>
-          Intricate design on the back of the hand or palm.
-        </p>
-        <p>
-          Simple design on hand and wrist.
-        </p>
-      </div>
-      <div class="price">
-        <h3>Custom Design or Group Parties</h3>
-        <p>
-          Contact for pricing.
-        </p>
-      </div>
-    </section>
+          <!-- <form id="name">Name<br>
+            <input type="text" name="name">
+          </form>
+          <form id="email"><br>E-mail<br>
+            <input type="text" name="name">
+          </form> -->
+          <div class="feedback">
+            <form id="messsage"><br>Message<br>
+              <textarea></textarea>
+            </form>
+            <button type="button">Send</button>
+          </div>
+          <!-- <form id="messsage"><br>Message<br>
+            <textarea></textarea>
+          </form>
+          <button type="button">Send</button> -->
+        </div>
+      </section>
 
-    <footer>
-      <p>Vivacious Designs, Copyright &copy 2018</p>
-    </footer>
+      <section id="pricing">
+        <div class="price">
+          <h3>Small Designs - $5 per design</h3>
+          <p>
+            Simple design on the back of the hand or palm.
+          </p>
+        </div>
+        <div class="price">
+          <h3>Complex Designs - $10 per design</h3>
+          <p>
+            Intricate design on the back of the hand or palm.
+          </p>
+          <p>OR</p>
+          <p>
+            Simple design on hand and wrist.
+          </p>
+        </div>
+        <div class="price">
+          <h3>Custom Design or Group Parties</h3>
+          <p>
+            Contact for pricing.
+          </p>
+        </div>
+      </section>
 
+      <footer>
+        <p>Vivacious Designs, Copyright &copy 2018</p>
+      </footer>
+    </div>
   </body>
 </html>
