@@ -5,31 +5,30 @@
   --background: #662000;
   /* --background: #FFC54C; */
 }
-
+/* universal - applies to the entire site */
 html {
   box-sizing: border-box;
   color: #fff;
-  background-image: linear-gradient(to top right, gray, white);
-  /* background-color: white; */
+  background-image: linear-gradient(to top right, gray, black);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Kavivanar', cursive;
-  /* font-family: 'Great Vibes', cursive; */
-
 }
 
+/* make body width 85% and center of page */
 body {
   width: 85%;
   margin:auto;
 }
 
-/* Universal - applies to the whole page*/
+/* contents inside the main image */
 .container {
   width: 85%;
   margin: auto;
   overflow: hidden;
 }
 
+/* make the nav-menu of teh current page active to distinguise */
 #active {
   font-weight: bold;
 }
@@ -38,6 +37,7 @@ header a:hover {
   font-weight: bold;
 }
 
+/* Apply CSS grid to the body */
 .wrapper {
   display: grid;
   grid-gap: 20px;
@@ -62,13 +62,14 @@ header ul {
   padding: 0;
 }
 
-/* Make the menu horizontal */
+/* Make the menu horizontal from vertical*/
 header li {
   float: left;
   display: inline;
   padding: 1.25rem;
 }
 
+/* move the logo to the left */
 header #logo {
   float: left;
 }
@@ -77,6 +78,7 @@ header #logo h1 {
   margin: 0;
 }
 
+/* Special font to the logo first letters */
 header #logo h1 span{
   font-family: 'Great Vibes', cursive;
   font-size: 4rem;
@@ -87,13 +89,11 @@ header nav {
   float: right;
 }
 
+/* make h3 tags uniform */
 h3 {
   text-decoration: underline;
   text-transform: uppercase;
 }
-/* h3::after {
-
-} */
 
 img {
   max-width: 100%;
@@ -116,7 +116,7 @@ img {
   margin-top: 80px;
 }
 
-/* To target #boxes, #gallery */
+/* To target boxes under - #boxes, #gallery, and #pricing */
 #boxes, #gallery, #pricing {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,16 +139,15 @@ img {
   grid-template-areas:
     'contact message message';
 }
-
+/* to be able to connect to the grid-template-areas */
 .contact {
   grid-area: contact;
 }
 .message {
   grid-area: message;
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 
+/* input text boxes */
 .message input[type="text"] {
   width: 200px;
   border: none;
@@ -165,4 +164,26 @@ img {
 footer {
   text-align: center;
   color: black;
+}
+
+@media (max-width: 768px) {
+
+}
+
+/* phone view - make only 1 column*/
+@media (max-width: 576px) {
+  #boxes, #gallery, #pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  #contact-info {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'contact'
+      'message';
+    }
 }
