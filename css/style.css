@@ -92,6 +92,7 @@ header nav {
 /* make h3 tags uniform */
 h3 {
   text-decoration: underline;
+  /* border-bottom: 2px solid currentColor; */
   text-transform: uppercase;
 }
 
@@ -120,10 +121,10 @@ img {
 #boxes, #gallery, #pricing {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 1.25rem;
 }
 /* To terget what's insid the boxes */
-.box, .price, .contact, .message{
+.box, .price, .contact{
   background-color: var(--background);
   padding: 1.25rem;
 }
@@ -134,26 +135,32 @@ img {
 
 #contact-info {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     'contact message message';
 }
 /* to be able to connect to the grid-template-areas */
-.contact {
+#contact {
   grid-area: contact;
 }
-.message {
+#message {
   grid-area: message;
 }
+/* #user {
+  grid-area: user;
+} */
 
 /* input text boxes */
-.message input[type="text"] {
+#message input[type="text"] {
   width: 200px;
   border: none;
 }
-.message textarea {
-  min-width: 365px;
+
+#message textarea {
+  /* min-width: 365px;
+  min-height: 80px; */
+  max-width: 100%;
   min-height: 80px;
   border: none;
   box-sizing: border-box;
